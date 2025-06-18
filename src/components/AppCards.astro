@@ -9,18 +9,18 @@ interface Props {
 }
 
 const { title, description, image }: Props = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>("@/assets/*.jpg");
+const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,gif}");
 if (!images[image]) throw new Error(`"${image}" does not exist in glob: "@/assets/*.jpg}"`);
 ---
 
-<article class="bg-theme-obsidian shadow-theme flex flex-col gap-4 rounded-lg p-4">
+<article class="bg-theme-obsidian shadow-theme z-10 flex flex-col gap-4 rounded-lg p-4">
   <h2>{title}</h2>
   <p>{description}</p>
   <Image
     src={images[image]()}
     alt={title}
-    width={100}
-    height={100}
+    width={267}
+    height={193}
     loading="eager"
     format="webp"
     class="rounded-lg"
