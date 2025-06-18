@@ -13,7 +13,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg
 if (!images[image]) throw new Error(`"${image}" does not exist in glob: "@/assets/*.jpg}"`);
 ---
 
-<article class="bg-theme-obsidian shadow-theme z-10 flex flex-col gap-4 rounded-lg p-4">
+<article class="bg-theme-obsidian shadow-theme z-10 flex w-80 flex-col gap-4 rounded-lg p-4">
   <h2>{title}</h2>
   <p>{description}</p>
   <Image
@@ -23,6 +23,6 @@ if (!images[image]) throw new Error(`"${image}" does not exist in glob: "@/asset
     height={193}
     loading="eager"
     format="webp"
-    class="rounded-lg"
+    class="w-full rounded-lg"
   />
 </article>

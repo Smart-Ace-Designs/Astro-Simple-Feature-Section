@@ -26,16 +26,16 @@ const data = [
   title="devChallenges | Simple Feature Section"
   description="A devChallenges.io coding challenge."
 >
-  <section class="bg-theme-midnight relative h-screen">
+  <section class="bg-theme-midnight relative min-h-screen">
     <img
       src="/Background_image.svg"
       alt=""
       aria-hidden="true"
       class="absolute size-full object-cover"
     />
-    <h1>Quality feedbacks for your SaaS products</h1>
-    <p>The blocks & components you need</p>
-    <div class="flex flex-col gap-4">
+    <h1 class="text-center text-4xl font-bold">Quality feedbacks for your SaaS products</h1>
+    <p class="text-center text-lg">The blocks & components you need</p>
+    <div class="flex flex-col items-center gap-4">
       {
         data.map((item) => (
           <AppCard title={item.title} description={item.description} image={item.image} />
