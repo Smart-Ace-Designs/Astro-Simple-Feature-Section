@@ -6,11 +6,11 @@
 
 <div align="center">
   <h3>
-    <a href="{https://your-demo-link.your-domain}">
+    <a href="https://smartacedesigns-astro-sfs.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="{https://your-url-to-the-solution}">
+    <a href="https://github.com/Smart-Ace-Designs/Astro-Simple-Feature-Section">
       Solution
     </a>
     <span> | </span>
