@@ -4,12 +4,13 @@ import { Image } from "astro:assets";
 
 interface Props {
   icon: string;
+  accentColor: string;
   title: string;
   description: string;
   image: string;
 }
 
-const { icon, title, description, image }: Props = Astro.props;
+const { icon, accentColor, title, description, image }: Props = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,gif}");
 if (!images[image]) throw new Error(`"${image}" does not exist in glob: "@/assets/*.jpg}"`);
 ---
