@@ -4,16 +4,19 @@ import AppCard from "@/components/AppCard.astro";
 
 const data = [
   {
+    icon: "✋",
     title: "Collect Feedback at Multiple Touchpoints",
     description: "Provide a comprehensive understanding of the customer experience.",
     image: "/src/assets/photo_2.png",
   },
   {
+    icon: "🥅",
     title: "Ask Targeted and Specific Questions",
     description: "Avoid vague or open-ended questions that may not yield actionable insights.",
     image: "/src/assets/photo_1.png",
   },
   {
+    icon: "💬",
     title: "Prioritize and Respond to Feedback",
     description:
       "Communicate the changes or improvements you've made in response to their feedback.",
@@ -26,13 +29,22 @@ const data = [
   title="devChallenges | Simple Feature Section"
   description="A devChallenges.io coding challenge."
 >
-  <section class="bg-theme-midnight min-h-screen bg-[url('/Background_image.svg')] p-10">
-    <h1 class="text-center text-4xl font-bold">Quality feedback for your SaaS products</h1>
-    <p class="text-center text-lg">The blocks & components you need</p>
+  <section class="bg-theme-midnight min-h-screen bg-[url('/Background_image.svg')] p-12">
+    <div class="mx-auto flex w-sm flex-col items-center gap-4">
+      <h1 class="text-center text-4xl leading-12 font-bold">
+        Quality feedback for your SaaS products
+      </h1>
+      <p class="text-theme-slate text-center">The blocks & components you need</p>
+    </div>
     <div class="mt-10 flex flex-col items-center justify-center gap-8 md:flex-row md:items-stretch">
       {
         data.map((item) => (
-          <AppCard title={item.title} description={item.description} image={item.image} />
+          <AppCard
+            icon={item.icon}
+            title={item.title}
+            description={item.description}
+            image={item.image}
+          />
         ))
       }
     </div>
