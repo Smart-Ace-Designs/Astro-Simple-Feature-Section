@@ -15,14 +15,18 @@ const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg
 if (!images[image]) throw new Error(`"${image}" does not exist in glob: "@/assets/*.jpg}"`);
 ---
 
-<article class="bg-theme-obsidian shadow-theme flex w-80 flex-col gap-4 rounded-xl p-6">
+<article
+  class="bg-theme-obsidian shadow-theme flex w-80 flex-col gap-4 rounded-xl p-6"
+  role="region"
+  aria-labelledby="appcard-title"
+>
   <div
     class:list={["flex size-13 items-center justify-center rounded-full text-xl", accentColor]}
     aria-hidden="true"
   >
     {icon}
   </div>
-  <h2 class="text-xl leading-6 font-semibold">{title}</h2>
+  <h2 id="appcard-title" class="text-xl leading-6 font-semibold">{title}</h2>
   <p class="text-theme-silver w-5/6 leading-5 font-light">{description}</p>
   <Image src={images[image]()} alt={title} loading="eager" class="mt-auto w-full rounded-xl" />
 </article>
