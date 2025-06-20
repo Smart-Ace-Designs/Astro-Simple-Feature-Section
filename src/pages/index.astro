@@ -32,9 +32,13 @@ const data = [
   title="devChallenges | Simple Feature Section"
   description="A devChallenges.io coding challenge."
 >
-  <section class="bg-theme-midnight min-h-screen bg-[url('/Background_image.svg')] p-13">
+  <section
+    class="bg-theme-midnight min-h-screen bg-[url('/Background_image.svg')] p-13"
+    role="region"
+    aria-labelledby="feature-section-title"
+  >
     <div class="mx-auto flex w-84 flex-col items-center gap-4 md:w-md">
-      <h1 class="text-center text-[2.5rem] leading-12 font-semibold">
+      <h1 id="feature-section-title" class="text-center text-[2.5rem] leading-12 font-semibold">
         Quality feedbacks for your SaaS products
       </h1>
       <p class="text-theme-slate text-center">The blocks & components you need</p>
