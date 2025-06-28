@@ -28,11 +28,5 @@ if (!images[image]) throw new Error(`"${image}" does not exist in glob: "@/asset
   </div>
   <h2 id="appcard-title" class="text-xl leading-6 font-semibold">{title}</h2>
   <p class="text-theme-silver w-5/6 leading-5 font-light">{description}</p>
-  <Image
-    src={images[image]()}
-    alt={title}
-    loading="eager"
-    quality={"max"}
-    class="mt-auto h-[190px] w-full rounded-xl"
-  />
+  <Image src={images[image]()} alt={title} loading="eager" class="mt-auto h-48 rounded-xl" />
 </article>
