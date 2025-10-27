@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 100 900;
-  src: url("/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
-  font-display: swap;
-}
-
 @theme {
   --color-theme-midnight: #121826;
   --color-theme-slate: #9da3ae;
@@ -18,7 +10,7 @@
   --color-theme-sunbeam: #fceed8;
   --color-theme-silver: #d2d5da;
 
-  --font-sans: "Outfit", "sans-serif";
+  --font-outfit: "Outfit", "sans-serif";
 
   --shadow-theme: 0px 30px 100px 0px rgba(17, 23, 41, 0.15);
 }
