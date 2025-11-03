@@ -16,7 +16,7 @@ if (!images[image]) throw new Error(`"${image}" does not exist in glob: "@/asset
 ---
 
 <article
-  class="bg-theme-obsidian shadow-theme flex w-80 flex-col gap-4 rounded-xl p-6"
+  class="flex w-80 flex-col gap-4 rounded-xl bg-theme-obsidian p-6 shadow-theme"
   role="region"
   aria-labelledby="appcard-title"
 >
@@ -27,7 +27,7 @@ if (!images[image]) throw new Error(`"${image}" does not exist in glob: "@/asset
     {icon}
   </div>
   <h2 id="appcard-title" class="text-xl leading-6 font-semibold">{title}</h2>
-  <p class="text-theme-silver w-5/6 leading-5 font-light">{description}</p>
+  <p class="w-5/6 leading-5 font-light text-theme-silver">{description}</p>
   <Image
     src={images[image]()}
     alt={title}
