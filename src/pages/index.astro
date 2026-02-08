@@ -32,31 +32,33 @@ const data = [
   title="devChallenges | Simple Feature Section"
   description="A devChallenges.io coding challenge."
 >
-  <section
-    class="min-h-screen bg-theme-midnight bg-[url('/Background_image.svg')] p-13"
-    role="region"
-    aria-labelledby="feature-section-title"
-  >
-    <div class="mx-auto flex w-84 flex-col items-center gap-4 md:w-md">
-      <h1 id="feature-section-title" class="text-center text-[2.5rem] leading-12 font-semibold">
-        Quality feedbacks for your SaaS products
-      </h1>
-      <p class="text-center text-theme-slate">The blocks & components you need</p>
-    </div>
-    <div
-      class="mt-12 flex flex-col flex-wrap items-center justify-center gap-8 md:flex-row md:items-stretch"
+  <main>
+    <section
+      class="min-h-screen bg-theme-midnight bg-[url('/Background_image.svg')] p-13"
+      role="region"
+      aria-labelledby="feature-section-title"
     >
-      {
-        data.map((item) => (
-          <AppCard
-            accentColor={item.accentColor}
-            icon={item.icon}
-            title={item.title}
-            description={item.description}
-            image={item.image}
-          />
-        ))
-      }
-    </div>
-  </section>
+      <div class="mx-auto flex w-84 flex-col items-center gap-4 md:w-md">
+        <h1 id="feature-section-title" class="text-center text-[2.5rem] leading-12 font-semibold">
+          Quality feedbacks for your SaaS products
+        </h1>
+        <p class="text-center text-theme-slate">The blocks & components you need</p>
+      </div>
+      <div
+        class="mt-12 flex flex-col flex-wrap items-center justify-center gap-8 md:flex-row md:items-stretch"
+      >
+        {
+          data.map((item) => (
+            <AppCard
+              accentColor={item.accentColor}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              image={item.image}
+            />
+          ))
+        }
+      </div>
+    </section>
+  </main>
 </MainLayout>
